@@ -17,7 +17,7 @@ const Settings = () => {
   useEffect(() => {
     const fetch = async () => {
       const response = await axios.get(
-        "https://bookstore-backend-iits.onrender.com/api/v1/get-user-information", 
+        "http://localhost:1000/api/v1/get-user-information", 
         {headers}
       );
       setProfileData(response.data);
@@ -27,7 +27,7 @@ const Settings = () => {
   }, []);
    const summitAddress = async () => {
     const response = await axios.put(
-      "https://bookstore-backend-iits.onrender.com/api/v1/update-address", 
+      "http://localhost:1000/api/v1/update-address", 
       Value, 
       {headers}
     );
