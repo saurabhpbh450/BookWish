@@ -23,7 +23,7 @@ const AllBooks = () => {
     const getProducts = async () => {
         try {
             const response = await axios.get(
-                'https://bookstore-backend-iits.onrender.com/api/v1/get-all-books'
+                'http://localhost:1000/api/v1/get-all-books'
             );
             const books = response.data.data;
             setProducts(books);
