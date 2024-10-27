@@ -1,6 +1,5 @@
 // this is my frontend\src\components\BookCard\BookCard.jsx file
-// this is my frontend\src\pages\AllBooks.jsx file
-// this is my frontend\src\components\BookCard\BookCard.jsx file
+
 import axios from 'axios';
 import React from 'react';
 import { Link } from "react-router-dom";
@@ -15,7 +14,7 @@ const BookCard = ({ data, favourite }) => {
 
     const handleRemoveBook = async () => {
         const response = await axios.put(
-            "http://localhost:1000/api/v1/remove-book-from-favourite",
+            "https://bookstore-backend-iits.onrender.com/api/v1/remove-book-from-favourite",
             {},
             { headers }
         );
