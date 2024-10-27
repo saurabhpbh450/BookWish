@@ -30,7 +30,7 @@ const AddBook = () => {
         toast.error('All fields are required!');
       } else {
         const response = await axios.post(
-          'https://bookstore-backend-iits.onrender.com/api/v1/add-book',
+          'http://localhost:1000/api/v1/add-book',
           Data,
           { headers }
         );
