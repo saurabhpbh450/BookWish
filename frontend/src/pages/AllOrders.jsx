@@ -28,7 +28,7 @@ const AllOrders = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "https://bookstore-backend-iits.onrender.com/api/v1/get-all-orders", 
+          "http://localhost:1000/api/v1/get-all-orders", 
           { headers }
         );
         setAllOrder(response.data.data);  
@@ -48,7 +48,7 @@ const AllOrders = () => {
     const id = AllOrder[i]._id;
     try {
       const response = await axios.put(
-        `https://bookstore-backend-iits.onrender.com/api/v1/update-status/${id}`,
+        `http://localhost:1000/api/v1/update-status/${id}`,
         Values,
         { headers }
       );
