@@ -44,7 +44,7 @@ const SignUp = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "https://bookstore-backend-iits.onrender.com/api/v1/sign-up",
+        "http://localhost:1000/api/v1/sign-up",
         values
       );
       toast.success(response.data.message);
