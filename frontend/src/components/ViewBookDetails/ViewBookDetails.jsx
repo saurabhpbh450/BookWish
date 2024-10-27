@@ -1,5 +1,5 @@
 //this is my frontend\src\components\ViewBookDetails\ViewBookDetails.jsx
-// frontend/src/components/ViewBookDetails/ViewBookDetails.jsx
+
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Loader from '../Loader/Loader';
@@ -23,7 +23,7 @@ const ViewBookDetails = () => {
     const fetch = async () => {
       try {
         const response = await axios.get(
-          `https://bookstore-backend-iits.onrender.com/api/v1/get-book-by-id/${id}`
+          `http://localhost:1000/api/v1/get-book-by-id/${id}`
         );
         setData(response.data.data);
       } catch (error) {
@@ -42,7 +42,7 @@ const ViewBookDetails = () => {
   const handleFavourate = async () => {
     try {
       const response = await axios.put(
-        "https://bookstore-backend-iits.onrender.com/api/v1/add-book-to-favourite",
+        "http://localhost:1000/api/v1/add-book-to-favourite",
         {},
         { headers }
       );
@@ -55,7 +55,7 @@ const ViewBookDetails = () => {
   const handleCart = async () => {
     try {
       const response = await axios.put(
-        "https://bookstore-backend-iits.onrender.com/api/v1/add-to-cart",
+        "http://localhost:1000/api/v1/add-to-cart",
         {},
         { headers }
       );
@@ -68,7 +68,7 @@ const ViewBookDetails = () => {
   const deleteBook = async () => {
     try {
       const response = await axios.delete(
-        "https://bookstore-backend-iits.onrender.com/api/v1/delete-book",
+        "http://localhost:1000/api/v1/delete-book",
         { headers }
       );
       toast.success(response.data.message);
