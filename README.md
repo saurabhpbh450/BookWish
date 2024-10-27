@@ -19,8 +19,11 @@ BookWish is a feature-rich MERN stack project that provides a seamless book shop
 
 ## Technologies Used
 **Frontend:** React.js, Tailwind CSS
+
 **Backend:** Node.js, Express.js
+
 **Database:** MongoDB
+
 **Authentication:** JSON Web Tokens (JWT)
 
 ## Installation & Setup
@@ -57,3 +60,14 @@ npm install
 npm mongoose
 
 npm express
+
+
+## License
+This project is licensed under the MIT License.
+
+## Contact
+**Developer:** Saurabh Mishra
+
+**Email:** saurabhmishrapbh304@gmail.com
+
+**GitHub Profile:** https://github.com/saurabhpbh450
