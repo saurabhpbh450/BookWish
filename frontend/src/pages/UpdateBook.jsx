@@ -47,7 +47,7 @@ const UpdateBook = () => {
         setLoading(true);
         try {
             const response = await axios.put(
-                "http://localhost:1000/api/v1/update-book",
+                "https://bookstore-backend-iits.onrender.com/api/v1/update-book",
                 data,
                 { headers }
             );
