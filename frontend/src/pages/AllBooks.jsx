@@ -1,7 +1,4 @@
 // this is my frontend\src\pages\AllBooks.jsx file
-// frontend\src\pages\AllBooks.jsx
-// frontend/src/pages/AllBooks.jsx
-// frontend\src\pages\AllBooks.jsx
 
 import React, { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
@@ -25,7 +22,9 @@ const AllBooks = () => {
 
     const getProducts = async () => {
         try {
-            const response = await axios.get('http://localhost:1000/api/v1/get-all-books');
+            const response = await axios.get(
+                'http://localhost:1000/api/v1/get-all-books'
+            );
             const books = response.data.data;
             setProducts(books);
             setFilteredProducts(books);

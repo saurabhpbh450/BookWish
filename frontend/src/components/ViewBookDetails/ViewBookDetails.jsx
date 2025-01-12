@@ -1,5 +1,5 @@
 //this is my frontend\src\components\ViewBookDetails\ViewBookDetails.jsx
-// frontend/src/components/ViewBookDetails/ViewBookDetails.jsx
+
 import React, { useEffect, useState } from 'react';
 import axios from "axios";
 import Loader from '../Loader/Loader';

@@ -1,5 +1,5 @@
 // this is my frontend\src\pages\AllOrders.jsx file
-// AllOrders.jsx
+
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Loader from '../components/Loader/Loader';
