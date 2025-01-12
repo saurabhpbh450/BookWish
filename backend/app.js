@@ -12,13 +12,12 @@ const Favourite = require("./routes/favourite.js");
 const Cart = require("./routes/cart.js");
 const Order = require("./routes/order.js");
 
-app.use(cors(
-    {
-        origin: ["https://deploy-mern-1whq.vercel.app"],
-        methods: ["POST","GET"],
-        credentials: true
-    }
-));
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://your-frontend-domain.com'], // Allowed origins
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+    credentials: true // If you use cookies
+}));
+
 app.use(express.json());
 
 app.use("/api/v1", user);
