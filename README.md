@@ -2,6 +2,11 @@
 
 BookWish is a full-featured online platform for purchasing books, built using the MERN stack. The platform offers a seamless experience for both users and administrators, with functionalities tailored to each role. It offers two user roles (User and Admin) and supports features like browsing, purchasing, and managing books along with a secure authentication system.
 
+
+## Project live link
+https://chipper-tapioca-308edd.netlify.app/
+
+
 ## Features
 
 ### User Role
