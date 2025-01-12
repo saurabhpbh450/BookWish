@@ -28,7 +28,7 @@ const AllOrders = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1000/api/v1/get-all-orders", 
+          "https://bookwishofficial.onrender.com/api/v1/get-all-orders", 
           { headers }
         );
         setAllOrder(response.data.data);  
@@ -48,7 +48,7 @@ const AllOrders = () => {
     const id = AllOrder[i]._id;
     try {
       const response = await axios.put(
-        `http://localhost:1000/api/v1/update-status/${id}`,
+        `https://bookwishofficial.onrender.com/api/v1/update-status/${id}`,
         Values,
         { headers }
       );

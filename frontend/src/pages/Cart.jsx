@@ -33,7 +33,7 @@ const Cart = () => {
     const fetchCart = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:1000/api/v1/get-user-cart", {headers}
+          "https://bookwishofficial.onrender.com/api/v1/get-user-cart", {headers}
         );
         setCart(response.data.data);
       } catch (error) {
@@ -120,7 +120,7 @@ const Cart = () => {
     setCart(updatedCart);
 
     const response = await axios.put(
-      `http://localhost:1000/api/v1/remove-from-cart/${bookid}`, 
+      `https://bookwishofficial.onrender.com/api/v1/remove-from-cart/${bookid}`, 
       {}, 
       {headers}
     );
@@ -130,7 +130,7 @@ const Cart = () => {
   const PlaceOrder = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:1000/api/v1/place-order", 
+        "https://bookwishofficial.onrender.com/api/v1/place-order", 
         {order: Cart}, 
         {headers}
       );

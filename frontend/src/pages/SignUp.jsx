@@ -44,7 +44,7 @@ const SignUp = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:1000/api/v1/sign-up",
+        "https://bookwishofficial.onrender.com/api/v1/sign-up",
         values
       );
       toast.success(response.data.message);

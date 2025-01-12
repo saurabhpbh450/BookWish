@@ -47,7 +47,7 @@ const UpdateBook = () => {
         setLoading(true);
         try {
             const response = await axios.put(
-                "http://localhost:1000/api/v1/update-book",
+                "https://bookwishofficial.onrender.com/api/v1/update-book",
                 data,
                 { headers }
             );
@@ -63,7 +63,7 @@ const UpdateBook = () => {
     useEffect(() => {
         const fetch = async () => {
             const response = await axios.get(
-                `http://localhost:1000/api/v1/get-book-by-id/${id}`
+                `https://bookwishofficial.onrender.com/api/v1/get-book-by-id/${id}`
             );
             setData(response.data.data);
         };
