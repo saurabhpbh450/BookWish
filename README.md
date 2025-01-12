@@ -1,6 +1,6 @@
 # BookWish: Online Book Shopping Website
 
-BookWish is a feature-rich MERN stack project that provides a seamless book shopping experience. It offers two user roles (User and Admin) and supports features like browsing, purchasing, and managing books along with a secure authentication system.
+BookWish is a full-featured online platform for purchasing books, built using the MERN stack. The platform offers a seamless experience for both users and administrators, with functionalities tailored to each role. It offers two user roles (User and Admin) and supports features like browsing, purchasing, and managing books along with a secure authentication system.
 
 ## Features
 
