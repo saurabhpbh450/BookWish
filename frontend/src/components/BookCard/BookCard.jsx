@@ -1,12 +1,12 @@
 // this is my frontend\src\components\BookCard\BookCard.jsx file
-// this is my frontend\src\pages\AllBooks.jsx file
-// this is my frontend\src\components\BookCard\BookCard.jsx file
 import axios from 'axios';
 import React from 'react';
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
+import { toast } from 'react-toastify'; // Import toast
+import 'react-toastify/dist/ReactToastify.css'; // Import toast CSS
 
-const BookCard = ({ data, favourite }) => {
+const BookCard = ({ data, favourite, onRemove }) => { // Add onRemove callback
     const headers = {
         id: localStorage.getItem("id"),
         authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -14,16 +14,21 @@ const BookCard = ({ data, favourite }) => {
     };
 
     const handleRemoveBook = async () => {
-        const response = await axios.put(
-            "http://localhost:1000/api/v1/remove-book-from-favourite",
-            {},
-            { headers }
-        );
-        alert(response.data.message);
-    }
+        try {
+            const response = await axios.put(
+                "http://localhost:1000/api/v1/remove-book-from-favourite",
+                {},
+                { headers }
+            );
+            toast.success(response.data.message); // Use toast
+            onRemove(data._id); // Trigger the callback to refresh favorites
+        } catch (error) {
+            toast.error('Failed to remove the book from favorites!'); // Use toast for error
+        }
+    };
 
     return (
-        <motion.div 
+        <motion.div
             className='bg-gradient-to-r from-gray-700 to-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105'
             whileHover={{ scale: 1.05 }}
         >
@@ -38,8 +43,8 @@ const BookCard = ({ data, favourite }) => {
                 </div>
             </Link>
             {favourite && (
-                <button 
-                    className='bg-gradient-to-r from-amber-900 to-amber-950 px-4 py-2 border border-yellow-500 text-white font-semibold mt-4 hover:bg-yellow-400 transition-all duration-300' 
+                <button
+                    className='bg-gradient-to-r from-amber-900 to-amber-950 px-4 py-2 border border-yellow-500 text-white font-semibold mt-4 hover:bg-yellow-400 transition-all duration-300'
                     onClick={handleRemoveBook}
                 >
                     Remove
@@ -47,6 +52,7 @@ const BookCard = ({ data, favourite }) => {
             )}
         </motion.div>
     );
-}
+};
 
 export default BookCard;
+

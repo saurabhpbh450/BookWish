@@ -5,7 +5,7 @@ import axios from "axios";
 import Loader from '../Loader/Loader';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { GrLanguage } from 'react-icons/gr';
-import { FaHeart, FaCartPlus, FaEdit, FaShareAlt } from "react-icons/fa"; 
+import { FaHeart, FaCartPlus, FaEdit } from "react-icons/fa"; 
 import { MdDeleteForever } from "react-icons/md";
 import { useSelector } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
@@ -78,12 +78,7 @@ const ViewBookDetails = () => {
     }
   };
 
-  const handleShare = () => {
-    const shareText = `Check out this book: ${data.title} by ${data.author} - ${window.location.href}`;
-    navigator.clipboard.writeText(shareText).then(() => {
-      toast.success("Link copied to clipboard!");
-    });
-  };
+  const defaultImage = 'path/to/placeholder/image.jpg';
 
   return (
     <>
@@ -96,7 +91,7 @@ const ViewBookDetails = () => {
               whileHover={{ scale: 1.02 }}
             >
               <motion.img
-                src={data.url}
+                src={data.url || defaultImage}
                 alt={data.title}
                 className='h-[65vh] lg:h-[70vh] rounded-lg object-cover transition-opacity duration-300 shadow-lg'
                 initial={{ opacity: 0 }}
@@ -141,14 +136,6 @@ const ViewBookDetails = () => {
                   </motion.button>
                 </div>
               )}
-              <motion.button
-                className='rounded-full text-3xl p-3 mt-4 text-yellow-500 items-center transition-transform hover:scale-110'
-                onClick={handleShare}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaShareAlt />
-              </motion.button>
             </motion.div>
           </div>
           <div className='p-4 w-full lg:w-3/6'>
@@ -169,7 +156,7 @@ const ViewBookDetails = () => {
       )}
     </>
   );
-}
+};
 
 export default ViewBookDetails;
 
