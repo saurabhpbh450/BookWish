@@ -4,7 +4,12 @@ BookWish is a full-featured online platform for purchasing books, built using th
 
 
 ## Project live link
-https://bookwishbysaurabh.netlify.app/
+https://bookwish.netlify.app/
+
+
+## My LinkedIn Profile
+https://in.linkedin.com/in/saurabhmishra1077
+
 
 
 ## Features
