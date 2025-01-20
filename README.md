@@ -7,11 +7,6 @@ BookWish is a full-featured online platform for purchasing books, built using th
 https://bookwish.netlify.app/
 
 
-## My LinkedIn Profile
-https://in.linkedin.com/in/saurabhmishra1077
-
-
-
 ## Features
 
 ### User Role
@@ -78,6 +73,6 @@ This project is licensed under the MIT License.
 ## Contact
 **Developer:** Saurabh Mishra
 
-**Email:** saurabhmishrapbh304@gmail.com
+**LinkedIn Profile**  https://in.linkedin.com/in/saurabhmishra1077
 
 **GitHub Profile:** https://github.com/saurabhpbh450
